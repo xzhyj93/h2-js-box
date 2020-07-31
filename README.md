@@ -44,4 +44,4 @@ Chrome 浏览器中打开 chrome://extensions，打开开发者模式，点击�
 npm run build
 ```
 
-Chrome 浏览器中打开 chrome://extensions，打开开发者模式，点击“加载已解压的扩展程序”，选择下载仓库下 dist 目录
+Chrome 浏览器中打开 chrome://extensions，打开开发者模式，点击“加载已解压的扩展程序”，选择编译生成的 dist 目录
