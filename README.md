@@ -37,9 +37,10 @@ Chrome 浏览器中打开 chrome://extensions，打开开发者模式，点击�
 本地默认开启 localhost:8222，若想修改端口号，需要：
  - 更改 @/src/.umirc.local.ts 中 port 值
  - 修改 extension/dev/ 目录下 manifest.json 和 popup.html 中对应位置
-```
 
 3. build
+
+```
 # 编译。生成 dist 目录
 npm run build
 ```
