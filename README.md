@@ -2,7 +2,7 @@
 【Chrome插件】用于在本地编写与存储一些简单的JS脚本并运行
 
 ## 安装
-1. 下载chrome插件安装包
+1. 下载chrome插件安装包 [releases](https://github.com/xzhyj93/h2-js-box/releases)
 2. 解压缩
 3. Chrome 浏览器中打开 chrome://extensions，打开开发者模式，点击“加载已解压的扩展程序”，选择解压的目录。 即可在 Chrome 中添加此扩展。
 
