@@ -1,0 +1,57 @@
+:global {
+  body {
+    overflow: hidden;
+  }
+}
+.jsbox {
+  min-height: 100vh;
+
+  :global {
+    ::-webkit-scrollbar {
+      width: 12px;
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(99, 99, 99, 0.65);
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(99, 99, 99, 1);
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+      border-radius: 22px;
+    }
+
+    .site-layout {
+      max-height: 100vh;
+    }
+
+    .ant-menu {
+      max-height: calc(100vh - 44px);
+      overflow: auto;
+    }
+
+    .ant-layout-sider {
+      background: #262626;
+    }
+
+    .ant-menu-dark {
+      background: #262626;
+    }
+
+    .ant-layout {
+      background: #1f1f1f;
+    }
+
+    .ant-layout-sider-trigger {
+      background: #434343;
+    }
+
+    .ReactCodeMirror,
+    .CodeMirror {
+      height: 100%;
+    }
+  }
+}

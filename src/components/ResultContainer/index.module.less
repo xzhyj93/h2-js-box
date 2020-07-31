@@ -1,0 +1,25 @@
+.results {
+  flex: 1 1 0;
+  background: #151515;
+  overflow: auto;
+  padding: 10px;
+
+  .result {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    color: rgba(255, 255, 255, 0.65);
+  }
+
+  .time {
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+
+  .message {
+    flex: auto;
+    margin-left: 10px;
+    white-space: pre-wrap;
+    word-break: break-all;
+  }
+}
