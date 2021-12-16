@@ -5,6 +5,7 @@ import {
   PUT_MESSAGE,
   CREATE_CODE,
   SET_CODEHEIGHT,
+  SET_LANG,
 } from './actionTypes';
 import { IID, IDBItem, IDBItemWithIdAndTitle, IMessage } from '../types';
 import { IDemo } from '../types.d';
@@ -36,5 +37,10 @@ export const createCode = (param: IDBItem) => ({
 
 export const setCodeHeight = (param: number) => ({
   type: SET_CODEHEIGHT,
+  param,
+});
+
+export const setLang = (param: string) => ({
+  type: SET_LANG,
   param,
 });

@@ -9,6 +9,7 @@ import CommandHeader from './components/CommandHeader';
 import EditOutlined from '@ant-design/icons/EditOutlined';
 import DeleteOutlined from '@ant-design/icons/DeleteOutlined';
 import styles from './index.module.less';
+import getLangText from '../../utils/lang';
 
 const MenuItem = Menu.Item;
 
@@ -70,20 +71,20 @@ export default function CodeList() {
   }
 
   return (
-    <div>
+    <div className={styles.container}>
       <CommandHeader
         onAdd={() => {
           setTitleEdit({ title: '', type: 'add' });
         }}
       />
       <Menu theme="dark" selectedKeys={[`${currItem?.id}`]}>
-        <label className={styles.label}>&gt; 示例</label>
+        <label className={styles.label}>&gt; {getLangText('demo')}</label>
         {demos.map(item => (
           <MenuItem key={item.id} onClick={() => handleCurrItemChange(item.id)}>
             {item.title}
           </MenuItem>
         ))}
-        <label className={styles.label}>&gt;本地</label>
+        <label className={styles.label}>&gt; {getLangText('local')}</label>
         {allIdTitles.map((item, index) => (
           <MenuItem
             key={`${item.id}`}

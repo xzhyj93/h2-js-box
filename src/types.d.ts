@@ -29,4 +29,5 @@ export interface IStore {
   allIdTitles: { id: number; title: string }[];
   messages: IMessage[];
   demos: IDemo[];
+  lang: string;
 }

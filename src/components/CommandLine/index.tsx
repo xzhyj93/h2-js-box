@@ -4,6 +4,7 @@ import styles from './index.module.less';
 import { JSBoxContext } from '../../store/context';
 import { setMessages, putMessage, setCodeHeight } from '../../store/actions';
 import { IMessage } from '../../types';
+import getLangText from '../../utils/lang';
 
 export default function() {
   const { store, dispatch } = useContext(JSBoxContext);
@@ -73,19 +74,19 @@ export default function() {
   return (
     <div className={styles.line} ref={line}>
       <label>
-        请使用 print() 函数输出结果，用法类似 console.log；可参考示例代码。
+        {getLangText('notice')}
         <a
           target="_blank"
           href="https://github.com/xzhyj93/h2-js-box/blob/master/README.md"
         >
-          （更多帮助）
+          （{getLangText('help')}）
         </a>
       </label>
       <Button ghost onClick={clear} style={{ marginLeft: 'auto' }}>
-        清空
+        {getLangText('clear')}
       </Button>
       <Button style={{ margin: '0 10px' }} onClick={run} ghost>
-        执行
+        {getLangText('run')}
       </Button>
     </div>
   );

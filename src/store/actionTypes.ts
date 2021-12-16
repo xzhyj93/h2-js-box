@@ -4,3 +4,4 @@ export const SET_MESSAGES = 'SET_MESSAGES';
 export const PUT_MESSAGE = 'PUT_MESSAGE';
 export const CREATE_CODE = 'CREATE_CODE';
 export const SET_CODEHEIGHT = 'SET_CODEHEIGHT';
+export const SET_LANG = 'SET_LANG';

@@ -15,13 +15,6 @@
     "48": "icon.png",
     "128": "icon.png"
   },
-  "permissions": [
-    "contextMenus",
-    "management",
-    "tabs",
-    "storage",
-    "cookies",
-    "<all_urls>"
-  ],
+  "permissions": [],
   "content_security_policy": "default-src 'self' http://localhost:8222; script-src 'self' http://localhost:8222 'unsafe-eval'; connect-src *; style-src * 'unsafe-inline' 'self' blob:; img-src * data:;"
 }

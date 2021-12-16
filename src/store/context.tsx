@@ -4,13 +4,20 @@ import { setAllIdAndTitle, setCurrItem } from './actions';
 import { IStore } from '../types';
 import { getAllIdsAndTitles, getCodeById } from '../utils/model';
 import { demos } from '../demos/index';
+import { LANG_LOCAL_STORAGE_KEY } from './consts';
+import { updateLang } from '../utils/lang';
+
+const initialLang = localStorage.getItem(LANG_LOCAL_STORAGE_KEY) || 'zh-CN';
+
+updateLang(initialLang);
 
 const initContext: IStore = {
   currItem: null,
   allIdTitles: [],
   messages: [],
-  demos: demos,
+  demos: demos(),
   codeHeight: 600,
+  lang: initialLang,
 };
 
 const JSBoxContext = createContext<{
@@ -27,7 +34,7 @@ interface IProps {
 
 const JSBoxProvider = (props: IProps) => {
   const [store, dispatch] = useReducer(reducer, initContext);
-  const { currItem } = store;
+  const { currItem, demos } = store;
 
   useEffect(() => {
     getAllIdsAndTitles().then(all => {

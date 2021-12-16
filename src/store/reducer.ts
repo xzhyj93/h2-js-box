@@ -5,8 +5,12 @@ import {
   PUT_MESSAGE,
   CREATE_CODE,
   SET_CODEHEIGHT,
+  SET_LANG,
 } from './actionTypes';
 import { IStore } from '../types';
+import { LANG_LOCAL_STORAGE_KEY } from './consts';
+import { updateLang } from '../utils/lang';
+import { demos } from '../demos/index';
 
 interface IAction {
   type: string;
@@ -52,6 +56,14 @@ export default function reducer(state: IStore, action: IAction) {
       return {
         ...state,
         codeHeight: action.param,
+      };
+    case SET_LANG:
+      localStorage.setItem(LANG_LOCAL_STORAGE_KEY, action.param);
+      updateLang(action.param);
+      return {
+        ...state,
+        demos: demos(),
+        lang: action.param,
       };
   }
 }

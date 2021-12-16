@@ -4,6 +4,7 @@ import { ITitleEdit } from '../index';
 import { JSBoxContext } from '../../../store/context';
 import { addCode, getCodeById, putCode } from '../../../utils/model';
 import { createCode, setAllIdAndTitle } from '../../../store/actions';
+import getLangText from '../../../utils/lang';
 
 type IProps = {
   titleEdit: ITitleEdit;
@@ -36,7 +37,7 @@ export default function({ titleEdit, handleTitleChange, onEditEnd }: IProps) {
       onEditEnd();
     } else if (allIdTitles.some(item => item.title === title)) {
       Modal.error({
-        title: '文件名不可与已有文件重复！',
+        title: getLangText('noDuplicate'),
         onOk: () => {
           if (input?.current) {
             setTimeout(() => {
